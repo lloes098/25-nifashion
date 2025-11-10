@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import BottomNavigation from '@/components/BottomNavigation'
 
 export const metadata: Metadata = {
   title: '25-nifashion',
@@ -21,7 +22,12 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <div className="pb-16">
+          {children}
+        </div>
+        <BottomNavigation />
+      </body>
     </html>
   )
 }
